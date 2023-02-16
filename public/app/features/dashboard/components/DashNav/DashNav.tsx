@@ -265,7 +265,8 @@ export const DashNav = React.memo<Props>((props) => {
     }
 
     addCustomContent(customLeftActions, buttons);
-    return buttons;
+    // return [buttons];
+    return [];
   };
 
   const renderPlaylistControls = () => {

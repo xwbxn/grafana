@@ -351,7 +351,7 @@ export class UnthemedDashboardPage extends PureComponent<Props, State> {
         <DashNav
           dashboard={dashboard}
           title={dashboard.title}
-          folderTitle={dashboard.meta.folderTitle}
+          // folderTitle={dashboard.meta.folderTitle}
           isFullscreen={!!viewPanel}
           onAddPanel={this.onAddPanel}
           kioskMode={kioskMode}

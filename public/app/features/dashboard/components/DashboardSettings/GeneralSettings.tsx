@@ -5,10 +5,10 @@ import { TimeZone } from '@grafana/data';
 import { config } from '@grafana/runtime';
 import { CollapsableSection, Field, Input, RadioButtonGroup, TagsInput } from '@grafana/ui';
 import { Page } from 'app/core/components/PageNew/Page';
-import { FolderPicker } from 'app/core/components/Select/FolderPicker';
+// import { FolderPicker } from 'app/core/components/Select/FolderPicker';
 import { updateTimeZoneDashboard, updateWeekStartDashboard } from 'app/features/dashboard/state/actions';
 
-import { DeleteDashboardButton } from '../DeleteDashboard/DeleteDashboardButton';
+// import { DeleteDashboardButton } from '../DeleteDashboard/DeleteDashboardButton';
 
 import { PreviewSettings } from './PreviewSettings';
 import { TimePickerSettings } from './TimePickerSettings';
@@ -30,11 +30,11 @@ export function GeneralSettingsUnconnected({
 }: Props): JSX.Element {
   const [renderCounter, setRenderCounter] = useState(0);
 
-  const onFolderChange = (folder: { uid: string; title: string }) => {
-    dashboard.meta.folderUid = folder.uid;
-    dashboard.meta.folderTitle = folder.title;
-    dashboard.meta.hasUnsavedFolderChange = true;
-  };
+  // const onFolderChange = (folder: { uid: string; title: string }) => {
+  //   dashboard.meta.folderUid = folder.uid;
+  //   dashboard.meta.folderTitle = folder.title;
+  //   dashboard.meta.hasUnsavedFolderChange = true;
+  // };
 
   const onBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     if (event.currentTarget.name === 'title' || event.currentTarget.name === 'description') {
@@ -105,7 +105,7 @@ export function GeneralSettingsUnconnected({
           <Field label="Tags">
             <TagsInput id="tags-input" tags={dashboard.tags} onChange={onTagsChange} width={40} />
           </Field>
-          <Field label="Folder">
+          {/* <Field label="Folder">
             <FolderPicker
               inputId="dashboard-folder-input"
               initialTitle={dashboard.meta.folderTitle}
@@ -115,7 +115,7 @@ export function GeneralSettingsUnconnected({
               dashboardId={dashboard.id}
               skipInitialLoad={true}
             />
-          </Field>
+          </Field> */}
 
           <Field
             label="Editable"
@@ -158,9 +158,9 @@ export function GeneralSettingsUnconnected({
           </Field>
         </CollapsableSection>
 
-        <div className="gf-form-button-row">
+        {/* <div className="gf-form-button-row">
           {dashboard.meta.canDelete && <DeleteDashboardButton dashboard={dashboard} />}
-        </div>
+        </div> */}
       </div>
     </Page>
   );

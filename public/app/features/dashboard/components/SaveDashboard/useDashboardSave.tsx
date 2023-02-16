@@ -60,9 +60,16 @@ export const useDashboardSave = (dashboard: DashboardModel, isCopy = false) => {
 
       const currentPath = locationService.getLocation().pathname;
       const newUrl = locationUtil.stripBaseFromUrl(state.value.url);
+      const bid = new URLSearchParams(locationService.getLocation().search.slice(1)).get('bid');
+      const message = {
+        source: 'grafana',
+        dashboard: state.value,
+      };
+
+      window.parent.postMessage(message, '*');
 
       if (newUrl !== currentPath) {
-        setTimeout(() => locationService.replace(newUrl));
+        setTimeout(() => locationService.replace(`${newUrl}?bid=${bid}`));
       }
       if (dashboard.meta.isStarred) {
         dispatch(

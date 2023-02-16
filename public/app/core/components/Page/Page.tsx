@@ -6,8 +6,8 @@ import { GrafanaTheme2, PageLayoutType } from '@grafana/data';
 import { config } from '@grafana/runtime';
 import { CustomScrollbar, useStyles2 } from '@grafana/ui';
 
-import { Footer } from '../Footer/Footer';
-import { PageHeader } from '../PageHeader/PageHeader';
+// import { Footer } from '../Footer/Footer';
+// import { PageHeader } from '../PageHeader/PageHeader';
 import { Page as NewPage } from '../PageNew/Page';
 
 import { OldNavOnly } from './OldNavOnly';
@@ -37,14 +37,14 @@ export const OldPage: PageType = ({
 
   usePageTitle(navModel, pageNav);
 
-  const pageHeaderNav = pageNav ?? navModel?.main;
+  // const pageHeaderNav = pageNav ?? navModel?.main;
 
   return (
     <div className={cx(styles.wrapper, className)} {...otherProps}>
       {layout === PageLayoutType.Standard && (
         <CustomScrollbar autoHeightMin={'100%'} scrollTop={scrollTop} scrollRefCallback={scrollRef}>
           <div className={cx('page-scrollbar-content', className)}>
-            {pageHeaderNav && (
+            {/* {pageHeaderNav && (
               <PageHeader
                 actions={actions}
                 info={info}
@@ -52,9 +52,9 @@ export const OldPage: PageType = ({
                 renderTitle={renderTitle}
                 subTitle={subTitle}
               />
-            )}
+            )} */}
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </CustomScrollbar>
       )}

@@ -183,7 +183,7 @@ function shouldHideNavBar(location: HistoryLocation) {
     return true;
   }
 
-  return false;
+  return true;
 }
 
 NavBar.displayName = 'NavBar';

@@ -2,18 +2,18 @@
   "_comment": "Do not manually edit this file. Translations must be made in Crowdin which will sync them back into this file",
   "clipboard-button": {
     "inline-toast": {
-      "success": ""
+      "success": "成功"
     }
   },
   "command-palette": {
     "action": {
-      "change-theme": "",
-      "dark-theme": "",
-      "light-theme": "",
-      "search": ""
+      "change-theme": "变更主题",
+      "dark-theme": "暗主题",
+      "light-theme": "亮主题",
+      "search": "搜索"
     },
     "search-box": {
-      "placeholder": ""
+      "placeholder": "关键词..."
     },
     "section": {
       "actions": "",
@@ -295,7 +295,7 @@
       "placeholderCommandPalette": ""
     },
     "search-dashboards": {
-      "title": ""
+      "title": "搜索仪表板"
     },
     "server-settings": {
       "subtitle": "查看 Grafana 配置中定义的设置",
@@ -353,22 +353,22 @@
   },
   "panel": {
     "header-menu": {
-      "copy": "",
-      "create-library-panel": "",
-      "duplicate": "",
-      "edit": "",
-      "explore": "",
-      "get-help": "",
-      "hide-legend": "",
+      "copy": "复制到剪贴板",
+      "create-library-panel": "添加到库面板",
+      "duplicate": "创建副本",
+      "edit": "编辑",
+      "explore": "浏览",
+      "get-help": "帮助",
+      "hide-legend": "隐藏标签",
       "inspect": "检查",
       "inspect-data": "数据",
       "inspect-json": "面板 JSON",
       "more": "更多...",
-      "query": "",
-      "remove": "",
+      "query": "查询",
+      "remove": "删除",
       "share": "分享",
-      "show-legend": "",
-      "unlink-library-panel": "",
+      "show-legend": "显示标签",
+      "unlink-library-panel": "从库面板中移除",
       "view": "查看"
     }
   },
@@ -386,15 +386,15 @@
       "label": "关"
     },
     "select-button": {
-      "auto-refresh": ""
+      "auto-refresh": "自动刷新"
     }
   },
   "search": {
     "dashboard-actions": {
-      "import": "",
-      "new": "",
-      "new-dashboard": "",
-      "new-folder": ""
+      "import": "导入仪表板",
+      "new": "新建",
+      "new-dashboard": "新建仪表板",
+      "new-folder": "新建目录"
     }
   },
   "share-modal": {

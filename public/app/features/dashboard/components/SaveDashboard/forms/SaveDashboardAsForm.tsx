@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Button, Input, Switch, Form, Field, InputControl, HorizontalGroup } from '@grafana/ui';
-import { FolderPicker } from 'app/core/components/Select/FolderPicker';
+// import { Button, Input, Switch, Form, Field, InputControl, HorizontalGroup } from '@grafana/ui';
+import { Button, Input, Switch, Form, Field, HorizontalGroup } from '@grafana/ui';
+// import { FolderPicker } from 'app/core/components/Select/FolderPicker';
 import { DashboardModel, PanelModel } from 'app/features/dashboard/state';
 import { validationSrv } from 'app/features/manage-dashboards/services/ValidationSrv';
 
@@ -104,7 +105,7 @@ export const SaveDashboardAsForm: React.FC<SaveDashboardAsFormProps> = ({
               autoFocus
             />
           </Field>
-          <Field label="Folder">
+          {/* <Field label="Folder">
             <InputControl
               render={({ field: { ref, ...field } }) => (
                 <FolderPicker
@@ -118,7 +119,7 @@ export const SaveDashboardAsForm: React.FC<SaveDashboardAsFormProps> = ({
               control={control}
               name="$folder"
             />
-          </Field>
+          </Field> */}
           {!isNew && (
             <Field label="Copy tags">
               <Switch {...register('copyTags')} />
