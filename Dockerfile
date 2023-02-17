@@ -32,6 +32,7 @@ FROM ${GO_IMAGE} as go-builder
 
 # Install build dependencies
 RUN if grep -i -q alpine /etc/issue; then \
+      sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && \
       apk add --no-cache gcc g++ make; \
     fi
 
