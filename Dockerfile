@@ -41,7 +41,8 @@ WORKDIR /tmp/grafana
 COPY go.* ./
 COPY .bingo .bingo
 
-RUN go mod download && \
+RUN go env -w GOPROXY=https://goproxy.cn,direct && \
+    go mod download && \
     go install github.com/bwplotka/bingo@latest && \
     bingo get
 
