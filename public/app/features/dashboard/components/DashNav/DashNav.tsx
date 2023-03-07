@@ -202,7 +202,7 @@ export const DashNav = React.memo<Props>((props) => {
       return [];
     }
 
-    if (canStar) {
+    if (canStar && false) {
       let desc = isStarred
         ? t('dashboard.toolbar.unmark-favorite', 'Unmark as favorite')
         : t('dashboard.toolbar.mark-favorite', 'Mark as favorite');
@@ -238,13 +238,13 @@ export const DashNav = React.memo<Props>((props) => {
       );
     }
 
-    if (dashboard.meta.publicDashboardEnabled) {
+    if (dashboard.meta.publicDashboardEnabled && false) {
       buttons.push(
         <Tag key="public-dashboard" name="Public" colorIndex={5} data-testid={selectors.publicDashboardTag}></Tag>
       );
     }
 
-    if (dashboard.uid && config.featureToggles.dashboardComments) {
+    if (dashboard.uid && config.featureToggles.dashboardComments && false) {
       buttons.push(
         <ModalsController key="button-dashboard-comments">
           {({ showModal, hideModal }) => (
@@ -265,8 +265,7 @@ export const DashNav = React.memo<Props>((props) => {
     }
 
     addCustomContent(customLeftActions, buttons);
-    // return [buttons];
-    return [];
+    return [buttons];
   };
 
   const renderPlaylistControls = () => {
