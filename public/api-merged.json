@@ -15746,6 +15746,9 @@
             "Error"
           ]
         },
+        "is_paused": {
+          "type": "boolean"
+        },
         "no_data_state": {
           "type": "string",
           "enum": [
@@ -15951,7 +15954,7 @@
         },
         "isPaused": {
           "type": "boolean",
-          "example": false
+          "example": true
         },
         "labels": {
           "type": "object",
@@ -18910,6 +18913,7 @@
       }
     },
     "alertGroups": {
+      "description": "AlertGroups alert groups",
       "type": "array",
       "items": {
         "$ref": "#/definitions/alertGroup"
@@ -19312,7 +19316,6 @@
       }
     },
     "receiver": {
-      "description": "Receiver receiver",
       "type": "object",
       "required": [
         "active",
