@@ -107,12 +107,10 @@ RUN if grep -i -q alpine /etc/issue; then \
       echo 'ERROR: Unsupported base image' && /bin/false; \
     fi
 
+COPY glibc-alpine /tmp/glibc-alpine/
+
 # glibc support for alpine x86_64 only
 RUN if grep -i -q alpine /etc/issue && [ `arch` = "x86_64" ]; then \
-      wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.35-r0/glibc-2.35-r0.apk \
-        -O /tmp/glibc-2.35-r0.apk && \
-      wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.35-r0/glibc-bin-2.35-r0.apk \
-        -O /tmp/glibc-bin-2.35-r0.apk && \
       apk add --no-cache --allow-untrusted /tmp/glibc-2.35-r0.apk /tmp/glibc-bin-2.35-r0.apk && \
       rm -f /lib64/ld-linux-x86-64.so.2 && \
       ln -s /usr/glibc-compat/lib64/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2 && \
