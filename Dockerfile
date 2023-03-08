@@ -107,7 +107,7 @@ RUN if grep -i -q alpine /etc/issue; then \
       echo 'ERROR: Unsupported base image' && /bin/false; \
     fi
 
-COPY glibc-alpine /tmp/glibc-alpine/
+COPY glibc-alpine /tmp/
 
 # glibc support for alpine x86_64 only
 RUN if grep -i -q alpine /etc/issue && [ `arch` = "x86_64" ]; then \
