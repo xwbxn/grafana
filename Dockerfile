@@ -159,5 +159,8 @@ ARG RUN_SH=./packaging/docker/run.sh
 
 COPY ${RUN_SH} /run.sh
 
+ADD https://monset.oss-cn-hangzhou.aliyuncs.com/wait /wait
+RUN chmod +x /wait
+
 USER "$GF_UID"
-ENTRYPOINT [ "/run.sh" ]
+CMD [ "/run.sh" ]
